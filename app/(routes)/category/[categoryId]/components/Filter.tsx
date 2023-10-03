@@ -37,7 +37,9 @@ export default function Filter({ data, name, valueKey }: FilterProps) {
       },
       { skipNull: true }
     );
-    // 쿼리를 포함한 url로 push
+    // 이 부분이 중요함!
+    // 1. 쿼리를 포함한 url로 push
+    // 2. 서버 컴포넌트에서 params와 searchParams를 받아서 fetch
     router.push(url);
   };
 
